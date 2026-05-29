@@ -103,3 +103,21 @@ $(function () {
                 .addClass('btn btn-light btn-filter')
                 .attr('type', 'button')
                 .text(name);
+
+
+            // Aksi filter
+            $button.on('click', function () {
+                $('.btn-filter').removeClass('active');
+                $button.addClass('active');
+
+                $cols.each(function () {
+                    const text = $(this).find('.card-text').text().toLowerCase();
+                    const show = name === 'Semua' || text.includes(name.toLowerCase());
+
+                    $(this).toggle(show);
+                });
+            });
+
+            return $button;
+        }
+    }
