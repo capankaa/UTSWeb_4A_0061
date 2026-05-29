@@ -458,3 +458,54 @@ section {
 #prestasi .col-md-4:hover p {
     color: #ffffff !important;
 }
+
+/* Artikel*/
+#artikel {
+    padding: 5rem 0;
+    background: var(--gradient-light) !important;
+}
+/* search */
+#artikel input#blogSearch {
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+#blog-search {
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+}
+#blog-search input {
+    width: 100%;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    padding: 0.85rem 1rem;
+}
+/* card */
+.blog-card .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.blog-card .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* detail */
+.blog-detail-category {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(0, 82, 255, 0.1);
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.blog-detail-title {
+    margin-bottom: 1rem;
+}
+.blog-detail-description {
+    font-size: 1rem;
+    line-height: 1.8;
+}
