@@ -196,3 +196,24 @@ function initProjectModal() {
         $modal.addClass('open');
     });
 }
+
+    // Animasi counter prestasi
+    function initAchievementsCounter() {
+        if ($achievementsSection.length === 0) return;
+
+        const $counters = $achievementsSection.find('h3');
+
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    $counters.each(function () {
+                        animateCounter($(this));
+                    });
+
+                    obs.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        obs.observe($achievementsSection[0]);
+    }
