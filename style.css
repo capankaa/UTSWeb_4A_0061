@@ -281,3 +281,88 @@ section {
     transform: translateY(-6px) scale(1.01);
     box-shadow: 0 30px 70px rgba(2, 6, 23, 0.18);
 }
+
+/* Spesialis */
+#spesialis {
+    background: var(--gradient-light) !important;
+    padding: 5rem 0;
+}
+#spesialis h2 {
+    margin-bottom: 3rem;
+}
+/* Card */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    position: relative;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease;
+}
+
+/* animasi */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+.card:hover::before {
+    transform: scaleX(1);
+}
+.card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-body .btn {
+    margin-top: auto;
+}
+
+/* isi */
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.card-text {
+    color: #4b5563;
+    line-height: 1.7;
+}
+/* Specialis Card */
+.specialist {
+    padding-top: 1.25rem;
+}
+.specialist-avatar {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0.5rem auto 0.75rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+/* styling skill */
+.skill-badges {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.skill-badges span {
+    background: rgba(0, 82, 255, 0.08);
+    color: var(--primary-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
