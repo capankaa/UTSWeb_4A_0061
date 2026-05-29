@@ -217,3 +217,21 @@ function initProjectModal() {
 
         obs.observe($achievementsSection[0]);
     }
+
+    //Animasi angka prestasi
+    function animateCounter($el) {
+        const target = parseInt($el.text().replace('+', ''), 10) || 0;
+        let count = 0;
+        const step = Math.max(1, Math.floor(target / 80));
+
+        const interval = setInterval(() => {
+            count += step;
+
+            if (count >= target) {
+                $el.text(target + '+');
+                clearInterval(interval);
+            } else {
+                $el.text(count + '+');
+            }
+        }, 30);
+    }
