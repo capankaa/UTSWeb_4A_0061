@@ -8,3 +8,15 @@ $(function () {
     const $contactForm = $('#kontak form');
     const $achievementsSection = $('#prestasi');
     const $heroContainer = $('#beranda .container');
+
+    initDarkMode();
+    initBackToTop();
+    initAboutToggle();
+    initProjectFilter();
+    initProjectModal();
+    initAchievementsCounter();
+    initContactValidation();
+    initBlogSearch();
+    initBlogDetail();
+    initSmoothScroll();
+    initNavbarHighlight();
