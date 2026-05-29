@@ -347,3 +347,19 @@ function initProjectModal() {
             $modal.addClass('open');
         });
     }
+
+    // Smooth scroll navbar
+    function initSmoothScroll() {
+        $('.nav-link').on('click', function (e) {
+            const targetId = $(this).attr('href');
+            const $target = $(targetId);
+
+            if ($target.length) {
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 60
+                }, 600);
+            }
+        });
+    }
