@@ -304,4 +304,15 @@ function initProjectModal() {
         description: 'Tren UI/UX tahun 2026 berfokus pada pengalaman pengguna yang lebih sederhana, cepat, personal, dan interaktif. Desain antarmuka perlu dibuat responsif, mudah dipahami, dan nyaman digunakan.'
     }
 };
-
+        // Modal detail artikel
+        const $modal = $('<div>')
+            .addClass('custom-modal blog-detail-modal')
+        .html(`
+            <div class="modal-card">
+                <button type="button" class="modal-close">×</button>
+                <span class="blog-detail-category"></span>
+                <h4 class="blog-detail-title">Detail Artikel</h4>
+                <p class="blog-detail-description"></p>
+            </div>
+        `)
+            .appendTo($body);
