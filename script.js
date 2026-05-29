@@ -282,3 +282,26 @@ function initProjectModal() {
             });
         });
     }
+
+    // Modal data detail artikel
+    function initBlogDetail() {
+        if ($blogContainer.length === 0) return;
+
+        const artikelData = {
+    'Tips Desain Kreatif': {
+        title: 'Tips Desain Kreatif',
+        category: 'Tips Desain',
+        description: 'Desain kreatif membantu brand terlihat lebih menarik, profesional, dan mudah diingat. Dalam membuat desain yang efektif, penting untuk memperhatikan warna, tipografi, layout, hierarki visual, dan pesan utama yang ingin disampaikan.'
+    },
+    'Branding yang Efektif': {
+        title: 'Branding yang Efektif',
+        category: 'Branding',
+        description: 'Branding yang efektif adalah proses membangun identitas visual dan karakter brand secara konsisten. Mulai dari logo, warna, font, gaya komunikasi, hingga konten promosi harus memiliki arah yang sama.'
+    },
+    'UI/UX Trends 2026': {
+        title: 'UI/UX Trends 2026',
+        category: 'UI/UX Design',
+        description: 'Tren UI/UX tahun 2026 berfokus pada pengalaman pengguna yang lebih sederhana, cepat, personal, dan interaktif. Desain antarmuka perlu dibuat responsif, mudah dipahami, dan nyaman digunakan.'
+    }
+};
+
