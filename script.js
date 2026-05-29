@@ -235,3 +235,29 @@ function initProjectModal() {
             }
         }, 30);
     }
+
+
+    // Validasi form kontak
+    function initContactValidation() {
+        if ($contactForm.length === 0) return;
+
+        const $msg = $('<div>')
+            .css('marginTop', '1rem')
+            .appendTo($contactForm);
+
+        $contactForm.on('submit', function (e) {
+            e.preventDefault();
+
+            const name = $('#name').val().trim();
+            const email = $('#email').val().trim();
+            const message = $('#message').val().trim();
+
+            if (!name || !email || !message) {
+                $msg.text('Semua field harus diisi.').css('color', '#dc2626');
+                return;
+            }
+
+            $msg.text('Pesan berhasil dikirim. Terima kasih!').css('color', '#16a34a');
+            this.reset();
+        });
+    }
