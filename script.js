@@ -363,3 +363,23 @@ function initProjectModal() {
             }
         });
     }
+
+    // Highlight navbar sesuai section aktif
+    function initNavbarHighlight() {
+        const $sections = $('section');
+
+        $(window).on('scroll', function () {
+            let current = $sections.first().attr('id') || '';
+
+            $sections.each(function () {
+                if ($(window).scrollTop() >= $(this).offset().top - 120) {
+                    current = $(this).attr('id');
+                }
+            });
+
+            $('.nav-link').each(function () {
+                $(this).toggleClass('active', $(this).attr('href') === `#${current}`);
+            });
+        });
+    }
+});
