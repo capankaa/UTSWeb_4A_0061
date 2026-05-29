@@ -173,3 +173,26 @@ function initProjectModal() {
     $modal.find('.modal-close').on('click', function () {
         $modal.removeClass('open');
     });
+
+    // Isi konten modal berdasarkan proyek yang diklik
+    $('#proyek').on('click', '.btn-primary', function () {
+        const $card = $(this).closest('.card');
+        const title = $card.find('.card-title').text().trim();
+
+        const project = projectData[title] || {
+            category: 'Project',
+            description: 'Detail proyek belum tersedia.',
+            result: 'Informasi hasil proyek belum tersedia.'
+        };
+
+        $modal.find('.project-detail-category').text(project.category);
+        $modal.find('.project-detail-title').text(title);
+        $modal.find('.project-detail-description').text(project.description);
+        $modal.find('.project-detail-result').html(`
+            <strong>Output:</strong>
+            <p>${project.result}</p>
+        `);
+
+        $modal.addClass('open');
+    });
+}
