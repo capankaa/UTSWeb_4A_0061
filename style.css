@@ -537,3 +537,15 @@ section {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%) !important;
+    color: white !important;
+    padding: 2rem 0;
+    text-align: center;
+}
+footer p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
