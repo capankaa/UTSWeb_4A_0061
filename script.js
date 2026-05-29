@@ -121,3 +121,30 @@ $(function () {
             return $button;
         }
     }
+
+     // Detail proyek
+function initProjectModal() {
+    if ($projectRow.length === 0) return;
+
+    const projectData = {
+        'Zenny Apps': {
+            category: 'Desain UI/UX',
+            description: 'Zenny Apps adalah proyek desain antarmuka aplikasi pengelolaan keuangan sehari-hari dengan fokus pada pengalaman pengguna yang sederhana, modern, dan mudah dipahami.',
+            result: 'Hasil proyek mencakup rancangan tampilan aplikasi, struktur navigasi, layout dashboard, dan visual interface yang responsif.'
+        },
+        'Keripik Usus Kreuss': {
+            category: 'Desain Merek',
+            description: 'Keripik Usus Kreuss merupakan proyek branding untuk produk makanan ringan lokal. Fokus desain diarahkan pada identitas visual yang menarik, mudah diingat, dan sesuai dengan karakter produk yang unik.',
+            result: 'Hasil proyek mencakup konsep visual brand, desain kemasan, pemilihan warna, tipografi, dan elemen grafis pendukung.'
+        },
+        'Wisata Bahari Lamongan': {
+            category: 'Desain Media Sosial',
+            description: 'Proyek ini berfokus pada pembuatan desain media sosial untuk kebutuhan promosi Wisata Bahari Lamongan. Visual dibuat agar terlihat menarik, informatif, dan mampu meningkatkan daya tarik audiens terhadap destinasi wisata.',
+            result: 'Hasil proyek mencakup desain konten promosi, layout feed, visual campaign, serta materi publikasi digital untuk media sosial.'
+        },
+        'Banner PPDB': {
+            category: 'Desain Promosi',
+            description: 'Banner PPDB adalah proyek desain promosi untuk kebutuhan penerimaan peserta didik baru. Desain dibuat dengan tampilan informatif, jelas, dan mudah dibaca agar pesan promosi tersampaikan dengan baik.',
+            result: 'Hasil proyek mencakup desain banner digital, komposisi informasi, visual headline, serta elemen promosi yang siap digunakan.'
+        }
+    };
