@@ -70,3 +70,19 @@ $(function () {
             $('html, body').animate({ scrollTop: 0 }, 600);
         });
     }
+
+    // Filter proyek berdasarkan kategori
+    function initProjectFilter() {
+        if ($projectRow.length === 0) return;
+
+        const $cols = $projectRow.find('.col');
+        const categories = new Set();
+
+        $cols.each(function () {
+            const text = $(this).find('.card-text').text() || '';
+            const match = text.match(/Kategori:\s*(.*)/i);
+
+            if (match) {
+                categories.add(match[1].trim());
+            }
+        });
