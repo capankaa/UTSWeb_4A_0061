@@ -327,3 +327,23 @@ function initProjectModal() {
         $modal.find('.modal-close').on('click', function () {
             $modal.removeClass('open');
         });
+
+
+        //Konten modal berdasarkan artikel yang diklik
+        $('#artikel').on('click', '.blog-detail-btn', function (e) {
+            e.preventDefault();
+
+            const $card = $(this).closest('.blog-card');
+            const blogTitle = $card.find('.card-title').text().trim();
+
+            const artikel = artikelData[blogTitle] || {
+                title: blogTitle,
+                description: 'Detail artikel belum tersedia.'
+            };
+
+            $modal.find('.blog-detail-category').text(artikel.category);
+            $modal.find('.blog-detail-title').text(artikel.title);
+            $modal.find('.blog-detail-description').text(artikel.description);
+            $modal.addClass('open');
+        });
+    }
