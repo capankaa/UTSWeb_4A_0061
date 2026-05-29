@@ -421,3 +421,40 @@ section {
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* Prestasi */
+#prestasi {
+    padding: 5rem 0;
+    background: white;
+    position: relative;
+}
+#prestasi h2 {
+    color: #0f172a;
+}
+#prestasi h3 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+#prestasi p {
+    color: #4b5563 !important;
+    opacity: 1;
+    font-weight: 600;
+}
+/* styling card */
+#prestasi .col-md-4 {
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--gradient-light);
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+#prestasi .col-md-4:hover {
+    transform: translateY(-5px);
+    background: var(--gradient-primary);
+    color: white;
+}
+#prestasi .col-md-4:hover h3,
+#prestasi .col-md-4:hover p {
+    color: #ffffff !important;
+}
