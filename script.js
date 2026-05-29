@@ -316,3 +316,14 @@ function initProjectModal() {
             </div>
         `)
             .appendTo($body);
+
+            //Interaksi buka modal saat klik artikel
+            $modal.on('click', function (e) {
+            if (e.target === this) {
+                $modal.removeClass('open');
+            }
+        });
+
+        $modal.find('.modal-close').on('click', function () {
+            $modal.removeClass('open');
+        });
