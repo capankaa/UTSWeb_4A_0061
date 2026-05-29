@@ -49,3 +49,11 @@ $(function () {
             localStorage.setItem('capative-dark', enabled ? 'enabled' : 'disabled');
         });
     }
+
+    // Back to top
+    function initBackToTop() {
+        const $btn = $('<button>', {
+            id: 'backToTop',
+            type: 'button',
+            text: '↑'
+        }).appendTo($body);
