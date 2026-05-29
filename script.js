@@ -20,3 +20,17 @@ $(function () {
     initBlogDetail();
     initSmoothScroll();
     initNavbarHighlight();
+
+    // Dark mode
+    function initDarkMode() {
+        const $toggle = $('<button>', {
+            id: 'darkModeToggle',
+            class: 'btn btn-light btn-small',
+            text: 'Dark Mode'
+        });
+
+        const $wrapper = $('<div>')
+        .addClass('dark-mode-wrapper d-flex align-items-center')
+        .append($toggle);
+
+        $navbarContainer.append($wrapper);
