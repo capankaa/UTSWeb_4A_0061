@@ -261,3 +261,24 @@ function initProjectModal() {
             this.reset();
         });
     }
+
+    // Pencarian artikel
+    function initBlogSearch() {
+        const $blogSearch = $('#blogSearch');
+        const $blogCards = $('.blog-card');
+
+        if ($blogSearch.length === 0 || $blogCards.length === 0) return;
+
+        $blogSearch.on('input', function () {
+            const keyword = $(this).val().toLowerCase();
+
+            $blogCards.each(function () {
+                const title = $(this).find('.card-title').text().toLowerCase();
+                const text = $(this).find('.card-text').text().toLowerCase();
+
+                const isMatch = title.includes(keyword) || text.includes(keyword);
+
+                $(this).toggle(isMatch);
+            });
+        });
+    }
