@@ -34,3 +34,18 @@ $(function () {
         .append($toggle);
 
         $navbarContainer.append($wrapper);
+
+        if (localStorage.getItem('capative-dark') === 'enabled') {
+            $body.addClass('dark-mode');
+            $toggle.text('Light Mode');
+        }
+
+        $toggle.on('click', function () {
+            $body.toggleClass('dark-mode');
+
+            const enabled = $body.hasClass('dark-mode');
+            $toggle.text(enabled ? 'Light Mode' : 'Dark Mode');
+
+            localStorage.setItem('capative-dark', enabled ? 'enabled' : 'disabled');
+        });
+    }
