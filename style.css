@@ -188,3 +188,96 @@ section {
     color: rgba(255, 255, 255, 0.95);
     font-size: 0.95rem;
 }
+
+/* Tentang Kami */
+#tentang {
+    padding: 5.5rem 0;
+    background: #f8fbff;
+}
+#tentang .section-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+#tentang h2 {
+    font-size: 2.7rem;
+    line-height: 1.05;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+.about-description {
+    font-size: 1.08rem;
+    max-width: 620px;
+    color: #4b5563;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+/* shape highlight */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.about-highlights div {
+    background: white;
+    border: 1px solid rgba(0, 82, 255, 0.12);
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+.about-highlights strong {
+    display: block;
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+/* setting foto */
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+/* frame foto */
+.about-photo-wrap {
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    padding: 12px;
+    display: inline-block;
+    box-shadow: 0 24px 54px rgba(2, 6, 23, 0.16);
+    transition: transform 400ms cubic-bezier(.2, .9, .2, 1), box-shadow 300ms ease;
+    position: relative;
+    background: transparent;
+}
+.about-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg, rgba(0, 82, 255, 0.95), rgba(0, 0, 0, 0.95), rgba(0, 82, 255, 0.95));
+    z-index: 0;
+    filter: blur(0.8px);
+}
+.about-photo-wrap::after {
+    content: '';
+    position: absolute;
+    top: 12px; right: 12px; bottom: 12px; left: 12px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    z-index: 1;
+    box-shadow: inset 0 6px 18px rgba(2, 6, 23, 0.04);
+}
+
+/* animasi dikit */
+.about-photo-wrap:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 30px 70px rgba(2, 6, 23, 0.18);
+}
