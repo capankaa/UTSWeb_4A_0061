@@ -86,3 +86,20 @@ $(function () {
                 categories.add(match[1].trim());
             }
         });
+
+
+    // Buat tombol filter
+        const $wrap = $('<div>').addClass('filter-controls');
+        const $semua = createFilterBtn('Semua');
+
+        $wrap.append($semua);
+        categories.forEach(category => $wrap.append(createFilterBtn(category)));
+
+        $projectRow.before($wrap);
+        $semua.trigger('click');
+
+        function createFilterBtn(name) {
+            const $button = $('<button>')
+                .addClass('btn btn-light btn-filter')
+                .attr('type', 'button')
+                .text(name);
