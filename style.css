@@ -698,3 +698,24 @@ body.dark-mode .blog-modal-description {
     color: #cbd5e1;
 }
 
+/* Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+#backToTop.show {
+    display: flex;
+}
