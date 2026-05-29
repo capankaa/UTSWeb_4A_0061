@@ -148,3 +148,17 @@ function initProjectModal() {
             result: 'Hasil proyek mencakup desain banner digital, komposisi informasi, visual headline, serta elemen promosi yang siap digunakan.'
         }
     };
+
+    // Modal detail proyek
+    const $modal = $('<div>')
+        .addClass('custom-modal project-detail-modal')
+        .html(`
+            <div class="modal-card">
+                <button type="button" class="modal-close">×</button>
+                <span class="project-detail-category"></span>
+                <h4 class="project-detail-title">Detail Proyek</h4>
+                <p class="project-detail-description"></p>
+                <div class="project-detail-result"></div>
+            </div>
+        `)
+        .appendTo($body);
