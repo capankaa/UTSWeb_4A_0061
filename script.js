@@ -57,3 +57,16 @@ $(function () {
             type: 'button',
             text: '↑'
         }).appendTo($body);
+
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 300) {
+                $btn.addClass('show');
+            } else {
+                $btn.removeClass('show');
+            }
+        });
+
+        $btn.on('click', function () {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+        });
+    }
