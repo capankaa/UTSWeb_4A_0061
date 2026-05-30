@@ -769,3 +769,42 @@ body.dark-mode .blog-modal-description {
     background: var(--primary-color) !important;
     color: white !important;
 }
+
+/* styling custom modal*/
+.custom-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1150;
+}
+.custom-modal.open {
+    display: flex;
+}
+.custom-modal .modal-card {
+    width: min(560px, 100%);
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+}
+.custom-modal .modal-card h4 {
+    margin-bottom: 1rem;
+}
+.custom-modal .modal-card p {
+    color: #4b5563;
+}
+.custom-modal .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #334155;
+}
