@@ -11,7 +11,6 @@ $(function () {
 
     initDarkMode();
     initBackToTop();
-    initAboutToggle();
     initProjectFilter();
     initProjectModal();
     initAchievementsCounter();
@@ -70,6 +69,8 @@ $(function () {
             $('html, body').animate({ scrollTop: 0 }, 600);
         });
     }
+
+
 
     // Filter proyek berdasarkan kategori
     function initProjectFilter() {
